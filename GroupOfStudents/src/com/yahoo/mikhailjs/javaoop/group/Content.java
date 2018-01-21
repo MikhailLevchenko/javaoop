@@ -57,8 +57,8 @@ public class Content {
 		Date birthDate;
 		
 		naw.add(Calendar.YEAR, -age);
-		naw.set(Calendar.DAY_OF_YEAR, randoms.nextInt(
-				naw.getActualMaximum(Calendar.DAY_OF_YEAR)));
+		naw.set(Calendar.DAY_OF_YEAR,
+                randoms.nextInt(naw.getActualMaximum(Calendar.DAY_OF_YEAR)));
 		naw.set(Calendar.MILLISECOND, 0);
 		naw.set(Calendar.SECOND, 0);
 		naw.set(Calendar.MINUTE, 0);
