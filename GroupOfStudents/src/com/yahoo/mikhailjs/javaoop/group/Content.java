@@ -5,7 +5,6 @@ import java.util.Calendar;
 import java.util.Random;
 
 public class Content {
-
 	private static String[] firstNamesMale = new String[] {"Сергей", "Антон",
 			"Владимир", "Игорь", "Борис", "Алексей", "Юрий", "Тарас", "Олег",
 			"Ярослав", "Денис", "Степан", "Виктор", "Захар", "Арсен", "Назар",
@@ -28,7 +27,7 @@ public class Content {
 	public static String randomFristName(boolean sex) {
 		String firstName;
 		
-		if(sex) {
+		if (sex) {
 			firstName = firstNamesMale[randoms.nextInt(firstNamesMale.length)];
 		} else {
 			firstName = firstNames[randoms.nextInt(firstNames.length)];
@@ -39,7 +38,7 @@ public class Content {
 	public static String randomLastName(boolean sex) {
 		String lastName;
 
-		if(sex) {
+		if (sex) {
 			lastName = lastNamesMale[randoms.nextInt(lastNamesMale.length)];
 		} else {
 			lastName = lastNames[randoms.nextInt(lastNames.length)];
@@ -48,7 +47,6 @@ public class Content {
 	}
 	
 	public static Human randomHuman() {
-
 		boolean sex = randoms.nextBoolean();
 		String firstName = randomFristName(sex);
 		String lastName = randomLastName(sex);
