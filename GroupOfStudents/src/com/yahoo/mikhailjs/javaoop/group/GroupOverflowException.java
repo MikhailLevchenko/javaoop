@@ -26,8 +26,8 @@ public class GroupOverflowException extends GroupInsertionException {
 		// TODO Auto-generated constructor stub
 	}
 
-	public GroupOverflowException(String message, Throwable cause, boolean enableSuppression,
-			boolean writableStackTrace) {
+	public GroupOverflowException(String message, Throwable cause,
+		boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 		// TODO Auto-generated constructor stub
 	}
