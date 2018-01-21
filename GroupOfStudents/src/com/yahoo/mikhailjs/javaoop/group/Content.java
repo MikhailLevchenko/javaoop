@@ -40,8 +40,7 @@ public class Content {
 		String lastName;
 
 		if(sex) {
-			lastName = lastNamesMale[randoms.nextInt(
-									 lastNamesMale.length)];
+			lastName = lastNamesMale[randoms.nextInt(lastNamesMale.length)];
 		} else {
 			lastName = lastNames[randoms.nextInt(lastNames.length)];
 		}
