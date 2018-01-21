@@ -26,7 +26,8 @@ public class GroupInsertionException extends Exception {
 		// TODO Auto-generated constructor stub
 	}
 
-	public GroupInsertionException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+	public GroupInsertionException(String message, Throwable cause,
+		boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 		// TODO Auto-generated constructor stub
 	}
