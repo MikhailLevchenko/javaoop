@@ -69,7 +69,7 @@ public class Group {
 				continue;
 			} else if (isInGroup(lastName)) {
 				message = String.format("Студент с фамилией"
-							+ " %s уже в гуппе.", lastName)
+							+ " %s уже в гуппе.", lastName);
 				throw new GroupInsertionException(message);
 			} else {
 				members[i] = student;
