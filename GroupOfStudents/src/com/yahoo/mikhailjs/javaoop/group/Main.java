@@ -29,27 +29,23 @@ public class Main {
 				break;
 			}
 			switch (s.charAt(0)) {
-			case 'W': {
+			case 'W': 
 				printGroupRows(studGroup);
 				break;
-			}
-			case 'R': {
+			case 'R':
 				System.out.println(" Remove fom group by last name:");
 				studGroup.removeByLastName(sc.nextLine());
 				break;
-			}
-			case 'P': {
+			case 'P':
 				printGroup(studGroup);
 				break;
-			}
-			case 'A': {
+			case 'A':
 				try {
 					addRandomStud(studGroup);
 				} catch (GroupOverflowException e) {
 					System.out.println(e.getMessage());
 				}
 				break;
-			}
 			}
 		}
 		sc.close();
@@ -79,7 +75,7 @@ public class Main {
 				continue;
 			}
 			sb.append(String.format("%d). [ %s %s ]", counter,
-					i.getFirstName(), i.getLastName()));
+						i.getFirstName(), i.getLastName()));
 			sb.append(System.lineSeparator());
 		}
 		System.out.print(sb);
@@ -90,7 +86,7 @@ public class Main {
 		for (;;) {
 			try {
 				return group.addStudent(new Student(Content.randomHuman(),
-						"Cyber Security"));
+								    "Cyber Security"));
 			} catch (GroupOverflowException e) {
 				throw e;
 			} catch (GroupInsertionException e) {
