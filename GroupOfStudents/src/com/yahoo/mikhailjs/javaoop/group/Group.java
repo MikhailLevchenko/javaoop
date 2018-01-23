@@ -46,9 +46,7 @@ public class Group {
 			throws GroupInsertionException {
 		for (Object i : students) {
 			try {
-				if (i instanceof Student) {
-					addStudent((Student) i);
-				}
+				addStudent((Student) i);
 			} catch (GroupOverflowException e) {
 				break;
 			}
@@ -64,13 +62,15 @@ public class Group {
 	public Student addStudent(Student student) throws GroupInsertionException {
 
 		String lastName = student.getLastName();
+		String message;
 
 		for (int i = 0; i < members.length; i++) {
 			if (members[i] != null) {
 				continue;
 			} else if (isInGroup(lastName)) {
-				throw new GroupInsertionException(String.format("Студент"
-							+ " с фамилией %s уже в гуппе.", lastName));
+				message = String.format("Студент с фамилией"
+							+ " %s уже в гуппе.", lastName)
+				throw new GroupInsertionException(message);
 			} else {
 				members[i] = student;
 				return members[i];
