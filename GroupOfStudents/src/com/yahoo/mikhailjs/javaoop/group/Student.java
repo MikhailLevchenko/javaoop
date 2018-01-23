@@ -5,7 +5,7 @@ public class Student extends Human {
 	
 	public Student(Human human, String specialty ) {
 		super(human.getFirstName(), human.getLastName(), human.getBirthDate(),
-				human.isSex());
+		      human.isSex());
 		this.specialty = specialty;
 	}
 
@@ -20,6 +20,6 @@ public class Student extends Human {
 	@Override
 	public String toString() {
 		return String.format("%s %s study \"%s\"", getFirstName(),
-				getLastName(), getSpecialty());
+				     getLastName(), getSpecialty());
 	}
 }
