@@ -14,12 +14,15 @@ public class Intersecting {
 	 * @param fOut	 Output file.
 	 * @throws FileNotFoundException
 	 */
-	public static void filesIntersect(File fInOne, File fInTwo, File fOut) throws FileNotFoundException {
+	public static void filesIntersect(File fInOne, File fInTwo, File fOut)
+		throws FileNotFoundException {
 		try (Scanner scOne = new Scanner(fInOne);
-				Scanner scTwo = new Scanner(fInTwo);
-				PrintWriter pw = new PrintWriter(fOut)) {
+		     Scanner scTwo = new Scanner(fInTwo);
+		     PrintWriter pw = new PrintWriter(fOut)) {
+			
 			UniqueWords unique = new UniqueWords();
-			Pattern delimiter = Pattern.compile("[\\p{Space},\\p{Cntrl},\\p{Punct}]+");
+			Pattern delimiter = Pattern
+				.compile("[\\p{Space},\\p{Cntrl},\\p{Punct}]+");
 
 			scOne.useDelimiter(delimiter);
 			scTwo.useDelimiter(delimiter);
