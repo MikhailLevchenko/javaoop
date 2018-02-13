@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class CharsStatistic {
-	ArrayList<CharCount> chkList = new ArrayList<>();
+	private int charsTotal = 0;
+	private ArrayList<CharCount> chkList = new ArrayList<>();
 
 	public void add(char ch) {
+		charsTotal = charsTotal+1;
 		for (CharCount i : chkList) {
 			if (i.getCharacter() == ch) {
 				i.increase();
@@ -21,7 +23,7 @@ public class CharsStatistic {
 			@Override
 			public int compare(CharCount o1, CharCount o2) {
 				return Integer.compare(o2.getRepeating(),
-							o1.getRepeating());
+						       o1.getRepeating());
 			}
 		});
 	}
@@ -35,8 +37,8 @@ public class CharsStatistic {
 				sb.append(System.lineSeparator());
 			}
 			n = n + 1;
-			sb.append(String.format("%d). %s %d", n, i.getCharacter(),
-						i.getRepeating()));
+			sb.append(String.format("%d). %s %.2f%%", n, i.getCharacter(),
+						(double)100*i.getRepeating()/charsTotal));
 		}
 		return sb.toString();
 	}
