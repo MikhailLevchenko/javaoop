@@ -40,4 +40,30 @@ public class CharsStatistic {
 		}
 		return sb.toString();
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((chkList == null) ? 0 : chkList.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CharsStatistic other = (CharsStatistic) obj;
+		if (chkList == null) {
+			if (other.chkList != null)
+				return false;
+		} else if (!chkList.equals(other.chkList))
+			return false;
+		return true;
+	}
+	
 }
